@@ -82,6 +82,7 @@ public class MinimumSubsetSumDifference {
         for (int num : arr) {
             for (int j = sum / 2; j >= num; j--) {
                 dp[j] = dp[j] || dp[j - num];
+                System.out.println("num: "+num+"\nj : "+j+"\n"+Arrays.toString(dp)+"\n");
             }
         }
 
