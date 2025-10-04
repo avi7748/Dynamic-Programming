@@ -5,7 +5,7 @@ package Knapsack.Knapsack01;
 
 import java.util.Arrays;
 
-public class MinimumSubsetSumDifference {
+public class G_MinimumSubsetSumDifference {
     static int[][] dp;
 
     static boolean isSubsetPossible(int[] arr, int n, int target) {

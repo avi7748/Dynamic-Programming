@@ -1,8 +1,8 @@
-package Knapsack.Knapsack01;
+package Knapsack.KnapsackUnbounded;
 
 import java.util.Arrays;
 
-public class Knapsack01Tabulation {
+public class C_UnboundedKnapsackTabulation {
     public static int KnapSack(int[] wt, int[] val, int W, int n){
 
         int[][] dp = new int[n+1][W+1];
@@ -18,7 +18,7 @@ public class Knapsack01Tabulation {
                 }
                 else if(wt[i-1] <= j){
                     dp[i][j] = Math.max(
-                            val[i-1] + dp[i-1][j-wt[i-1]],
+                            val[i-1] + dp[i][j - wt[i-1]],
                             dp[i-1][j]
                     );
                 }
@@ -41,4 +41,5 @@ public class Knapsack01Tabulation {
         int val1 = KnapSack(wt,val,W,n);
         System.out.println("Using tabulation : " + val1);
     }
+
 }

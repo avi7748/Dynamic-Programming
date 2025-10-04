@@ -1,6 +1,6 @@
 package Knapsack.Knapsack01;
 
-public class Knapsack01recursive {
+public class A_Knapsack01recursive {
 
     public static int KnapSack(int[] wt, int[] val, int W, int n){
         if(W == 0 || n == 0){

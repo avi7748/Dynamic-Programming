@@ -2,7 +2,7 @@ package Knapsack.Knapsack01;
 
 import java.util.Arrays;
 
-public class Knapsack01Memoization {
+public class B_Knapsack01Memoization {
     public static int KnapSack(int[] wt, int[] val, int W, int n, int[][] dp){
         if(W == 0 || n == 0){
             return 0;

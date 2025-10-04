@@ -2,7 +2,7 @@ package Knapsack.Knapsack01;
 
 import java.util.Arrays;
 
-public class CountSubsetSum {
+public class F_CountSubsetSum {
 
 
     public static int countSubsetRec(int[] arr,int sum, int n, int[][] dp){

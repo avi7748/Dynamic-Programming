@@ -1,6 +1,6 @@
 package Knapsack.Knapsack01;
 
-class SubsetSum {
+class D_SubsetSum {
 
     static boolean SubsetSumRec(int[] arr, int sum, int n, Boolean[][]dp) {
         if( n == 0 && sum != 0) return false;

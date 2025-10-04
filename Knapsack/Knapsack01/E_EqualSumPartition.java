@@ -1,6 +1,6 @@
 package Knapsack.Knapsack01;
 
-public class EqualSumPartition {
+public class E_EqualSumPartition {
 
     public boolean canPartition(int[] nums) {
         int n = nums.length;
@@ -32,7 +32,7 @@ public class EqualSumPartition {
     }
 
     public static void main(String[] args) {
-        EqualSumPartition solution = new EqualSumPartition();
+        E_EqualSumPartition solution = new E_EqualSumPartition();
 
         int[] nums1 = {1, 5, 11, 5};
         System.out.println("Can partition [1, 5, 11, 5]? " + solution.canPartition(nums1));

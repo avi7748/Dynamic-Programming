@@ -2,7 +2,7 @@ package Knapsack.Knapsack01;
 
 import java.util.Arrays;
 
-public class CountNoSubsetWithGivenDiff {
+public class I_CountNoSubsetWithGivenDiff {
 
     public static void main(String[] args) {
         int[] arr = {1, 1, 2, 3};
