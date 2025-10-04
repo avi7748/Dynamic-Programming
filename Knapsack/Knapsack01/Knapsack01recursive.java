@@ -1,4 +1,4 @@
-package Knapsack;
+package Knapsack.Knapsack01;
 
 public class Knapsack01recursive {
 

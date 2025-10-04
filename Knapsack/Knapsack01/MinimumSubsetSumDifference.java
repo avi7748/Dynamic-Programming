@@ -1,4 +1,4 @@
-package Knapsack;
+package Knapsack.Knapsack01;
 //Problem Statement:
 //Given an array of positive integers, divide it into two subsets such that
 //the absolute difference between their sums is minimized.

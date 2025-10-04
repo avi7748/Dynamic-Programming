@@ -1,4 +1,4 @@
-package Knapsack;
+package Knapsack.Knapsack01;
 
 import java.util.Arrays;
 
@@ -30,28 +30,28 @@ public class CountNoSubsetWithGivenDiff {
         int target = (totalSum - d) / 2;
         int[][] dp = new int[n][target + 1];
         for (int[] row : dp) {
-            Arrays.fill(row, -1);
+            Arrays.fill(row, - 1);
         }
 
         return solveMemo(arr, target, n - 1, dp);
     }
 
-    private static int solveMemo(int[] arr, int sum, int index, int[][] dp) {
-        if (index < 0) {
+    private static int solveMemo(int[] arr, int sum, int n, int[][] dp) {
+        if (n < 0) {
             return (sum == 0) ? 1 : 0;
         }
 
-        if (dp[index][sum] != -1) {
-            return dp[index][sum];
+        if (dp[n][sum] != -1) {
+            return dp[n][sum];
         }
 
-        int exclude = solveMemo(arr, sum, index - 1, dp);
+        int exclude = solveMemo(arr, sum, n - 1, dp);
         int include = 0;
-        if (arr[index] <= sum) {
-            include = solveMemo(arr, sum - arr[index], index - 1, dp);
+        if (arr[n] <= sum) {
+            include = solveMemo(arr, sum - arr[n], n - 1, dp);
         }
 
-        return dp[index][sum] = include + exclude;
+        return dp[n][sum] = include + exclude;
     }
 
     public static int countPartitionsTabulation(int[] arr, int d) {
@@ -71,12 +71,14 @@ public class CountNoSubsetWithGivenDiff {
 
         for (int i = 1; i <= n; i++) {
             for (int j = 0; j <= target; j++) {
-                int exclude = dp[i - 1][j];
-                int include = 0;
+
                 if (arr[i - 1] <= j) {
-                    include = dp[i - 1][j - arr[i - 1]];
+                    dp[i][j] = dp[i - 1][j - arr[i - 1]] + dp[i - 1][j];
+                }else{
+
+                    dp[i][j] = dp[i - 1][j];
+
                 }
-                dp[i][j] = include + exclude;
             }
         }
 
