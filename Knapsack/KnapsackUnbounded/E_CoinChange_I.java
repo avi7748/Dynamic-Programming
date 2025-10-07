@@ -1,7 +1,7 @@
 package Knapsack.KnapsackUnbounded;
 
 import java.util.Arrays;
-public class E_CoinChange {
+public class E_CoinChange_I {
 
 
     public static int countMemo(int coins[], int sum) {
