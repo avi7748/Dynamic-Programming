@@ -34,7 +34,7 @@ public class H_TargetSum {
         if (arr[n - 1] <= target) {
             return dp[n][target] =
                     countSubsetDiff(arr, n - 1, target - arr[n - 1], dp) +
-                            countSubsetDiff(arr, n - 1, target, dp);
+                    countSubsetDiff(arr, n - 1, target, dp);
         } else {
             return dp[n][target] = countSubsetDiff(arr, n - 1, target, dp);
         }
