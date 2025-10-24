@@ -56,7 +56,7 @@ public class D_LongestCommonSubstring {
                     maxLen = Math.max(maxLen, dp[i][j]);
                 } else {
                     dp[i][j] = 0;
-                }
+                } 
             }
         }
         return maxLen;
