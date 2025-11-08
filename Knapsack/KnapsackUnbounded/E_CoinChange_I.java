@@ -24,9 +24,9 @@ public class E_CoinChange_I {
         }
     }
 
-    public static int countTab(int coins[], int sum) {
+    public static int countTab(int[] coins, int sum) {
         int n = coins.length;
-        int dp[][] = new int[n + 1][sum + 1];
+        int[][] dp = new int[n + 1][sum + 1];
 
         for (int i = 0; i <= n; i++) {
             dp[i][0] = 1;
